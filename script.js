@@ -55,6 +55,59 @@ function populateChannels() {
     });
 }
 
+// Platform Cards Animation
+function initPlatformCards() {
+    const cards = document.querySelectorAll('.platform-button');
+    
+    cards.forEach(card => {
+        // Parallax effect on hover
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const angleX = (y - centerY) / 20;
+            const angleY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+        });
+        
+        // Reset transform on mouse leave
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+        });
+    });
+}
+
+// Railway animation
+function initRailwayAnimation() {
+    const train = document.querySelector('.railway-card .train');
+    if (train) {
+        setInterval(() => {
+            train.style.transform = 'translateX(-100%)';
+            setTimeout(() => {
+                train.style.transition = 'none';
+                train.style.transform = 'translateX(200%)';
+                setTimeout(() => {
+                    train.style.transition = 'transform 8s linear';
+                    train.style.transform = 'translateX(-100%)';
+                }, 50);
+            }, 8000);
+        }, 8100);
+    }
+}
+
+// HikkaHost moon and stars animation
+function initHikkaHostAnimation() {
+    const stars = document.querySelectorAll('.hikkahost-card .star');
+    stars.forEach((star, index) => {
+        star.style.animationDelay = `${index * 0.3}s`;
+    });
+}
+
 // Initialize when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     // Create different layers of stars
@@ -63,7 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
     createStars('stars3', 15, 3, 7);
     
     populateChannels();
-
+    
+    initPlatformCards();
+    initRailwayAnimation();
+    initHikkaHostAnimation();
+    
     // Add smooth scroll behavior
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

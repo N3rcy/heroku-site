@@ -145,25 +145,26 @@ h1 {
 /* Platform Grid */
 .platform-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 2rem 0;
 }
 
 .platform-button {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    background: rgba(139, 92, 246, 0.1);
+    padding: 2.5rem;
+    background: rgba(20, 20, 40, 0.5);
     border: 1px solid rgba(139, 92, 246, 0.2);
-    border-radius: 16px;
+    border-radius: 20px;
     text-decoration: none;
     color: var(--text-light);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(10px);
-    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    min-height: 300px;
 }
 
 .platform-button::before {
@@ -174,12 +175,11 @@ h1 {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, 
-        rgba(139, 92, 246, 0.2),
-        rgba(236, 72, 153, 0.2),
-        rgba(59, 130, 246, 0.2)
+        rgba(139, 92, 246, 0.1),
+        rgba(236, 72, 153, 0.1)
     );
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
 
 .platform-button:hover {
@@ -192,24 +192,163 @@ h1 {
 }
 
 .platform-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent-purple);
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+    position: relative;
     z-index: 1;
 }
 
 .platform-button span {
     font-size: 1.2rem;
     font-weight: 500;
+    margin-top: 1rem;
+    position: relative;
     z-index: 1;
 }
 
-.command-preview {
-    margin-top: 0.5rem;
-    font-family: monospace;
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    z-index: 1;
+/* VDS Card */
+.vds-card {
+    background: linear-gradient(135deg, rgba(20, 20, 40, 0.8), rgba(30, 30, 60, 0.8));
+}
+
+.vds-icon {
+    color: #a78bfa;
+}
+
+.server-light {
+    animation: blink 2s infinite;
+}
+
+.server-unit {
+    animation: serverPulse 4s infinite;
+}
+
+/* Userland Card */
+.userland-card {
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.8), rgba(40, 40, 70, 0.8));
+}
+
+.userland-icon {
+    color: #818cf8;
+}
+
+.terminal-line {
+    animation: typingEffect 3s infinite;
+}
+
+.code-particles .particle {
+    animation: float 4s infinite;
+}
+
+/* Termux Card */
+.termux-card {
+    background: linear-gradient(135deg, rgba(25, 25, 45, 0.8), rgba(35, 35, 65, 0.8));
+}
+
+.termux-icon {
+    color: #93c5fd;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+/* Railway Card */
+.railway-card {
+    background: linear-gradient(135deg, rgba(28, 28, 48, 0.8), rgba(38, 38, 68, 0.8));
+}
+
+.railway-icon {
+    color: #60a5fa;
+}
+
+.train {
+    animation: trainMove 8s infinite linear;
+}
+
+.smoke circle {
+    animation: fadeOut 2s infinite;
+}
+
+/* HikkaHost Card */
+.hikkahost-card {
+    background: linear-gradient(135deg, rgba(32, 32, 52, 0.8), rgba(42, 42, 72, 0.8));
+}
+
+.hikkahost-icon {
+    color: #fcd34d;
+}
+
+.moon {
+    animation: moonGlow 4s infinite;
+}
+
+.star {
+    animation: twinkle 2s infinite;
+}
+
+.moon-particles .particle {
+    animation: float 3s infinite;
+}
+
+/* JamHost Card */
+.jamhost-card {
+    background: linear-gradient(135deg, rgba(35, 35, 55, 0.8), rgba(45, 45, 75, 0.8));
+}
+
+.jamhost-icon {
+    color: #f472b6;
+}
+
+.letter-h, .letter-j {
+    animation: letterGlow 3s infinite;
+}
+
+/* Animations */
+@keyframes serverPulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes typingEffect {
+    0% { transform: scaleX(0); }
+    50% { transform: scaleX(1); }
+    100% { transform: scaleX(0); }
+}
+
+@keyframes trainMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+@keyframes moonGlow {
+    0% { filter: drop-shadow(0 0 2px #fcd34d); }
+    50% { filter: drop-shadow(0 0 8px #fcd34d); }
+    100% { filter: drop-shadow(0 0 2px #fcd34d); }
+}
+
+@keyframes letterGlow {
+    0% { filter: drop-shadow(0 0 2px #f472b6); }
+    50% { filter: drop-shadow(0 0 5px #f472b6); }
+    100% { filter: drop-shadow(0 0 2px #f472b6); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 /* Feature Cards */
