@@ -563,21 +563,57 @@ h1 {
 
 /* Changelog Button */
 .changelog-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-    color: var(--text-light);
+    margin: 0 auto;
+    width: fit-content;
+    gap: 1.2rem;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     border-radius: 12px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.changelog-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: all 0.6s ease;
 }
 
 .changelog-button:hover {
-    transform: translateX(5px);
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    transform: translateX(6px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.changelog-button:hover::before {
+    left: 100%;
+}
+
+.changelog-button i {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.changelog-button:hover i {
+    color: white;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
 
 /* Footer */

@@ -15,7 +15,7 @@ function createStars(elementId, count, size, duration) {
     }
 }
 
-// List of channels (you'll need to replace these with actual channels from mlist)
+// List of channels 
 const channels = [
     {
         name: "Heroku Chat",
