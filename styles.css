@@ -301,8 +301,20 @@ h1 {
     color: #f472b6;
 }
 
-.letter-h, .letter-j {
-    animation: letterGlow 3s infinite;
+.letters-container {
+    animation: letters-glow 3s ease-in-out infinite;
+}
+
+.letter-j, .letter-h {
+    transition: transform 0.3s ease;
+}
+
+.letters-container:hover .letter-j {
+    transform: translate(-22px, 0);
+}
+
+.letters-container:hover .letter-h {
+    transform: translate(18px, 0);
 }
 
 /* Animations */
@@ -339,10 +351,15 @@ h1 {
     100% { filter: drop-shadow(0 0 2px #fcd34d); }
 }
 
-@keyframes letterGlow {
-    0% { filter: drop-shadow(0 0 2px #f472b6); }
-    50% { filter: drop-shadow(0 0 5px #f472b6); }
-    100% { filter: drop-shadow(0 0 2px #f472b6); }
+@keyframes letters-glow {
+    0%, 100% {
+        opacity: 0.9;
+        filter: drop-shadow(0 0 2px currentColor);
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px currentColor);
+    }
 }
 
 @keyframes float {
