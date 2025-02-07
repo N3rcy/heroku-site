@@ -722,7 +722,6 @@ footer {
 .particle3 { animation-delay: 1s; }
 .particle4 { animation-delay: 1.5s; }
 
-/* Добавим эффект свечения при наведении */
 .saturn:hover .planet {
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
 }
