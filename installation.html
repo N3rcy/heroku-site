@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-bg">
+        <div class="gradient-1" style="background: radial-gradient(circle at center, var(--accent-pink) 0%, transparent 70%)"></div>
+        <div class="gradient-2" style="background: radial-gradient(circle at center, var(--accent-blue) 0%, transparent 70%)"></div>
+        <div class="gradient-3" style="background: radial-gradient(circle at center, var(--accent-cyan) 0%, transparent 70%)"></div>
+    </div>
+
+    <div class="container">
+        <h1>Installation Guide</h1>
+        <p class="subtitle">Choose your platform and follow the instructions carefully</p>
+
+        <div class="installation-guide">
+            <!-- RailWay Section -->
+            <section class="platform-section">
+                <div class="platform-header">
+                    <img src="railway.svg" class="platform-icon" alt="Railway">
+                    <h2 class="platform-title">RailWay</h2>
+                </div>
+                <div class="step-list">
+                    <div class="step-item">Click the deployment button below</div>
+                    <div class="step-item">Follow Railway's setup instructions</div>
+                </div>
+                <a href="https://railway.com/template/2YO_QL" class="download-button" target="_blank">
+                    🚀 Deploy on Railway
+                </a>
+                <div class="warning">
+                    Any userbots are officially prohibited on RailWay. Account bans are your responsibility.
+                </div>
+            </section>
+
+            <!-- Ubuntu Section -->
+            <section class="platform-section">
+                <div class="platform-header">
+                    <img src="ubuntu.svg" class="platform-icon" alt="Ubuntu">
+                    <h2 class="platform-title">Ubuntu</h2>
+                </div>
+                <pre class="code-block">sudo apt update && sudo apt upgrade -y
+sudo apt install git python3-pip -y
+git clone https://github.com/coddrago/Heroku
+cd Heroku
+pip install -r requirements.txt
+python3 -m hikka</pre>
+            </section>
+
+            <!-- UserLAnd Section -->
+            <section class="platform-section">
+                <div class="platform-header">
+                    <img src="userland.svg" class="platform-icon" alt="UserLAnd">
+                    <h2 class="platform-title">UserLAnd</h2>
+                </div>
+                <div class="step-list">
+                    <div class="step-item">Install UserLAnd from Play Store</div>
+                    <div class="step-item">Choose Ubuntu → Minimal → Terminal</div>
+                    <div class="step-item">Run the following command after installation:</div>
+                </div>
+                <pre class="code-block">sudo apt update && sudo apt upgrade -y
+sudo apt install python3 git python3-pip -y
+git clone https://github.com/coddrago/Heroku
+cd Heroku
+sudo pip install -r requirements.txt
+python3 -m hikka</pre>
+            </section>
+
+            <!-- Termux Section -->
+            <section class="platform-section">
+                <div class="platform-header">
+                    <img src="termux.svg" class="platform-icon" alt="Termux">
+                    <h2 class="platform-title">Termux</h2>
+                </div>
+                <div class="step-list">
+                    <div class="step-item">Download Termux from F-Droid</div>
+                    <div class="step-item">Paste this command and follow instructions:</div>
+                </div>
+                <pre class="code-block">termux-wake-lock && export AIOHTTP_NO_EXTENSIONS=1
+pkg upgr -y && pkg install tur-repo
+pkg update && pkg install python3.10
+pkg i wget ncurses-utils python3.10 -y
+pkg install openssl git -y
+git clone https://github.com/coddrago/Heroku
+cd Heroku
+pip install -r requirements.txt
+python3.10 -m hikka --no-web</pre>
+                <a href="https://f-droid.org/repo/com.termux_118.apk" class="download-button" target="_blank">
+                    📱 Get Termux
+                </a>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
