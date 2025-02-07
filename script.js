@@ -15,46 +15,6 @@ function createStars(elementId, count, size, duration) {
     }
 }
 
-// List of channels 
-const channels = [
-    {
-        name: "Heroku Chat",
-        link: "https://t.me/heroku_chat"
-    },
-    {
-        name: "Heroku Logs",
-        link: "https://t.me/heroku_logs"
-    },
-    // Add more channels as needed
-];
-
-// Function to populate channels with animation
-function populateChannels() {
-    const channelsList = document.querySelector('.channels-list');
-    
-    channels.forEach((channel, index) => {
-        const channelItem = document.createElement('div');
-        channelItem.className = 'channel-item';
-        channelItem.style.opacity = '0';
-        channelItem.style.transform = 'translateY(20px)';
-        
-        const link = document.createElement('a');
-        link.href = channel.link;
-        link.target = '_blank';
-        link.innerHTML = `<i class="fas fa-hashtag"></i>${channel.name}`;
-        
-        channelItem.appendChild(link);
-        channelsList.appendChild(channelItem);
-
-        // Animate channels appearing
-        setTimeout(() => {
-            channelItem.style.transition = 'all 0.5s ease';
-            channelItem.style.opacity = '1';
-            channelItem.style.transform = 'translateY(0)';
-        }, index * 100);
-    });
-}
-
 // Platform Cards Animation
 function initPlatformCards() {
     const cards = document.querySelectorAll('.platform-button');
@@ -128,6 +88,36 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const codeBlocks = document.querySelectorAll('.code-block');
+    const notification = document.createElement('div');
+    notification.className = 'copy-notification';
+    document.body.appendChild(notification);
+
+    codeBlocks.forEach(block => {
+        block.addEventListener('click', async () => {
+            try {
+                const text = block.innerText.replace(/📋/g, '').trim();
+                await navigator.clipboard.writeText(text);
+                
+                notification.textContent = 'Copied to clipboard!';
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            } catch (err) {
+                notification.textContent = 'Failed to copy!';
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            }
         });
     });
 });
