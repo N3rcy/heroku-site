@@ -638,8 +638,125 @@ footer {
     animation: float 6s ease-in-out infinite;
 }
 
-.developer-info {
+/* Team Section */
+.team-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.team-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: rgba(20, 20, 40, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
+}
+
+.member-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.developer .member-icon {
+    background: linear-gradient(135deg, var(--accent-purple), #6d28d9);
+}
+
+.designer .member-icon {
+    background: linear-gradient(135deg, var(--accent-pink), #db2777);
+}
+
+.webui .member-icon {
+    background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
+}
+
+.member-info .role {
     color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.member-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.member-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.member-link:hover::after {
+    width: 100%;
+}
+
+.developer .member-link {
+    color: var(--accent-purple);
+}
+
+.designer .member-link {
+    color: var(--accent-pink);
+}
+
+.webui .member-link {
+    color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .member-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 .hover-effect {
