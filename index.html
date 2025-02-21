@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.svg" type="image/x-icon">
-    <title>Heroku Userbot - Hikka Fork</title>
+    <title>Heroku Userbot</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -59,7 +59,7 @@
         <section class="platforms">
             <h2 class="glow-text">Installation Platforms</h2>
             <div class="platform-grid">
-                <a href="/heroku/installation#ubuntu" class="platform-button vds-card">
+                <a href="/installation#ubuntu" class="platform-button vds-card">
                     <div class="platform-icon">
                         <svg viewBox="0 0 100 100" class="vds-icon">
                             <rect class="server-rack" x="20" y="10" width="60" height="80" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -83,7 +83,7 @@
                     <span>VDS</span>
                 </a>
 
-                <a href="/heroku/installation#userland" class="platform-button userland-card">
+                <a href="/installation#userland" class="platform-button userland-card">
                     <div class="platform-icon">
                         <svg viewBox="0 0 100 100" class="userland-icon">
                             <rect class="phone-body" x="30" y="10" width="40" height="80" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -104,7 +104,7 @@
                     <span>Userland</span>
                 </a>
 
-                <a href="/heroku/installation#termux" class="platform-button termux-card">
+                <a href="/installation#termux" class="platform-button termux-card">
                     <div class="platform-icon">
                         <svg viewBox="0 0 100 100" class="termux-icon">
                             <rect class="terminal-window" x="10" y="10" width="80" height="80" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -123,7 +123,7 @@
                     <span>Termux</span>
                 </a>
 
-                <a href="/heroku/installation#railway" class="platform-button railway-card">
+                <a href="/installation#railway" class="platform-button railway-card">
                     <div class="platform-icon">
                         <svg viewBox="0 0 100 100" class="railway-icon">
                             <g class="tracks">
@@ -150,7 +150,7 @@
                     <span>Railway</span>
                 </a>
 
-                <a href="/heroku/installation#module" class="platform-button hikkahost-card">
+                <a href="/installation#module" class="platform-button hikkahost-card">
                     <div class="platform-icon">
                         <svg viewBox="0 0 100 100" class="hikkahost-icon">
                             <g class="stars-background">
@@ -172,7 +172,7 @@
                     <span>HikkaHost</span>
                 </a>
 
-                <a href="/heroku/installation#jamhost" class="platform-button jamhost-card">
+                <a href="/installation#jamhost" class="platform-button jamhost-card">
                     <div class="platform-icon">
                         <svg viewBox="0 0 100 100" class="jamhost-icon">
                             <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -243,8 +243,8 @@
                     <p>Configure modules</p>
                 </div>
                 <div class="command-card">
-                    <code>.heta &lt;query&gt;</code>
-                    <p>Search for module</p>
+                    <code>.e &lt;query&gt;</code>
+                    <p>Execution the python code</p>
                 </div>
                 <div class="command-card">
                     <code>.dlm &lt;link/name&gt;</code>
@@ -257,6 +257,30 @@
                 <div class="command-card">
                     <code>.update</code>
                     <p>Update the bot</p>
+                </div>
+                <div class="command-card">
+                    <code>.herokuinfo</code>
+                    <p>Information of Userbot</p>
+                </div>
+                <div class="command-card">
+                    <code>.ch_heroku_bot &lt;username&gt;</code>
+                    <p>Change your bot username</p>
+                </div>
+                <div class="command-card">
+                    <code>.ulm &lt;query&gt;</code>
+                    <p>Unload module</p>
+                </div>
+                <div class="command-card">
+                    <code>.lm &lt;reply&gt;</code>
+                    <p>Load module from reply</p>
+                </div>
+                <div class="command-card">
+                    <code>.restart</code>
+                    <p>Restarts your Heroku</p>
+                </div>
+                <div class="command-card">
+                    <code>.logs</code>
+                    <p>Show your Heroku Logs</p>
                 </div>
             </div>
         </section>
@@ -353,10 +377,6 @@
                     <span class="emoji">😼</span>
                     <span class="channel-name">@HikamoruMods</span>
                 </a>
-                <a href="https://t.me/shadow_modules" class="module-card" target="_blank">
-                    <span class="emoji">😈</span>
-                    <span class="channel-name">@shadow_modules</span>
-                </a>
                 <a href="https://t.me/AmekaMods" class="module-card" target="_blank">
                     <span class="emoji">🦋</span>
                     <span class="channel-name">@AmekaMods</span>
@@ -364,6 +384,10 @@
                 <a href="https://t.me/aki_modules" class="module-card" target="_blank">
                     <span class="emoji">🚨</span>
                     <span class="channel-name">@aki_modules</span>
+                </a>
+                <a href="https://t.me/unneyon_hmods" class="module-card" target="_blank">
+                    <span class="emoji">🎻</span>
+                    <span class="channel-name">@unneyon_hmods</span>
                 </a>
             </div>
         </section>
@@ -428,7 +452,7 @@
                 <div class="love-message">
                     <p>With love</p>
                     <div class="animated-logo">
-                        <img src="icon.svg" alt="Planet Icon" class="logo-icon">
+                        <img src="saturn.svg" alt="Planet Icon" class="logo-icon">
                     </div>
                     <p>Heroku Userbot ❤</p>
                 </div>
