@@ -6,10 +6,35 @@
     <link rel="icon" href="icon.svg" type="image/x-icon">
     <title>Heroku Userbot</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <img src="icon.svg" alt="Heroku Logo">
+                <span>Heroku</span>
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="#" class="navbar-link">Home</a>
+                <a href="#platforms" class="navbar-link">Platforms</a>
+                <a href="#about" class="navbar-link">About</a>
+                <a href="#commands" class="navbar-link">Commands</a>
+                <a href="#modules" class="navbar-link">Modules</a>
+                <a href="installation.html" class="navbar-link">Installation</a>
+                <a href="https://github.com/coddrago/heroku" class="navbar-button" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="gradient-bg">
         <div class="gradient-1"></div>
         <div class="gradient-2"></div>
@@ -56,7 +81,7 @@
             </div>
         </header>
 
-        <section class="platforms">
+        <section id="platforms" class="platforms">
             <h2 class="glow-text">Installation Platforms</h2>
             <div class="platform-grid">
                 <a href="/installation#ubuntu" class="platform-button vds-card">
@@ -208,7 +233,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
             <h2 class="glow-text">About Heroku Userbot</h2>
             <div class="about-content">
                 <div class="feature-grid">
@@ -231,7 +256,7 @@
             </div>
         </section>
 
-        <section class="commands">
+        <section id="commands" class="commands">
             <h2 class="glow-text">Basic Commands</h2>
             <div class="commands-grid">
                 <div class="command-card">
@@ -298,7 +323,7 @@
             </div>
         </section>
 
-        <section class="modules">
+        <section id="modules" class="modules">
             <h2 class="glow-text">Module Sources</h2>
             <div class="modules-grid">
                 <a href="https://t.me/hikarimods" class="module-card" target="_blank">
@@ -467,5 +492,6 @@
         </footer>
     </div>
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>

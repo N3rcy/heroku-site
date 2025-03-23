@@ -6,10 +6,36 @@
     <link rel="icon" href="icon.svg" type="image/x-icon">
     <title>Installation Guide</title>
     <link rel="stylesheet" href="installation.css">
+    <link rel="stylesheet" href="navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="icon.svg" alt="Heroku Logo">
+                <span>Heroku</span>
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="index.html#platforms" class="navbar-link">Platforms</a>
+                <a href="index.html#about" class="navbar-link">About</a>
+                <a href="index.html#commands" class="navbar-link">Commands</a>
+                <a href="index.html#modules" class="navbar-link">Modules</a>
+                <a href="installation.html" class="navbar-link">Installation</a>
+                <a href="https://github.com/coddrago/heroku" class="navbar-button" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="gradient-bg">
         <div class="gradient-1" style="background: radial-gradient(circle at center, var(--accent-pink) 0%, transparent 70%)"></div>
         <div class="gradient-2" style="background: radial-gradient(circle at center, var(--accent-blue) 0%, transparent 70%)"></div>
@@ -127,6 +153,6 @@ python3.10 -m hikka --no-web</pre>
             </section>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
